@@ -15,19 +15,30 @@ label_1.grid(column=3, row=2)
 label_2 = Label(text="is equal to")
 label_2.grid(column=0, row=3)
 
+# Use this
 entry_2 = Entry()
 entry_2.grid(column=2, row=3)
+
+#     or use
+# entry_2 = Label()
+# entry_2.grid(column=2, row=3)
 
 label_3 = Label(text="KM")
 label_3.grid(column=3, row=3)
 
-
+# Use this
 def convert():
     entry_2.delete(0, 50)
     m = int(entry_1.get())
     km = str(m * 1.60934)
     entry_2.insert(2, km)
-
+    
+#     or use
+    
+# def convert():
+#     m = int(entry_1.get())
+#     km = str(m * 1.60934)
+#     entry_2.config(text=km)
 
 button_1 = Button(text="Convert", command=convert)
 button_1.grid(column=2, row=4)
